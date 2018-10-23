@@ -3,22 +3,59 @@
 <head>
   <meta charset="utf-8" />
   <script src="assets/js/jquery-3.2.1.js"></script>
+  <link rel="stylesheet" href="assets/bootstrap/bootstrap.css"/>
+  <link rel="stylesheet" href="assets/bootstrap/bootstrap.bundle.js"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
   <title>E-commerce</title>
 </head>
 <body>
-  <div>
-    <form>
-      <h4>Entrez vos coordonnées : </h4>
-      <label for="LastName">Nom : <input type="text" name="name" id="name" value=""/></label>
-      <label for="firstName">Prenom : <input type="text" name="firstName" id="firstName" value="" /></label>
-      <label for="mail">Adresse Mail : <input type="text" name="mail" id="mail" value="" /></label>
-      <label for="address">Adresse Postale : <input type="text" name="address" id="address" value="" /></label>
-      <label for="deliveryAddress">Adresse de livraison : <input type="text" name="deliveryAddress" id="deliveryAddress" value="" /></label>
-      <label for="phoneNumber">Numero De Telephone : <input type="text" name="phoneNumber" id="phoneNumber" value="" /></label>
-    </form>
-  </div>
-  <button type="button" name="compare" id="validCoordonnees">Valider vos coordonnées</button>
-  <script src="assets/js/projet.js">
-  </script>
-</body>
-</html>
+  <div id="formulaire">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-12 col-lg-12">
+              <form>
+                <h2 class="modal-title">Formulaire d'inscription : </h2>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4>Civilité *:</h4>
+                <p><label for="monsieur">Monsieur </label><input type="radio" name="Type" value="monsieur" id="monsieur" />
+                  <label for="madame">Madame </label><input type="radio" name="Type" value="madame" id="madame" />
+                  <label for="mademoiselle">Mademoiselle </label><input type="radio" name="Type" value="mademoiselle" id="mademoiselle" />
+                </p>
+                <h4>Entrez vos coordonnées :</h4>
+                <p><label for="LastName">Nom *: </label><input type="text" name="LastName" id="LastName" value=""/>
+                  <label for="firstName">Prenom *: </label><input type="text" name="firstName" id="firstName" value="" />
+                  <label for="mail">Adresse Mail * : </label><input type="text" name="mail" id="mail" value="" /></br>
+                  <label for="confirmMail">Confimez l'Adresse Mail * : </label><input type="text" name="confirmMail" id="confirmMail" value="" />
+                  <label for="password">Mot de passe * : </label><input type="password" name="password" id="password" value="" />
+                  <label for="confirmPassword">Confirmation de mot de passe * : </label><input type="password" name="confirmPassword" id="confirmPassword" value="" />
+                </p>
+                <h4>Entrez vos coordonnées postales :</h4>
+                <p><label for="address">Adresse Postale *: </label><textarea type="text" name="address" id="address" value=""></textarea>
+                  <label for="zipCode">Code Postal *: </label><input type="text" name="zipCode" id="zipCode" value="" />
+                  <label for="city">Ville *: </label><input type="text" name="city" id="city" value="" />
+                </p>
+                <h4>Entrez vos coordonnées de livraison :</h4>
+                <p><label for="deliveryAddress">Adresse de livraison *: </label><textarea type="text" name="deliveryAddress" id="deliveryAddress" value=""></textarea>
+                  <label for="deliveryCode">Code Postal de livraison *: </label><input type="text" name="deliveryCode" id="deliveryCode" value="" />
+                  <label for="deliveryCity">Ville de livraison * : </label><input type="text" name="deliveryCity" id="deliveryCity" value="" />
+                </p>
+                <h4>Entrez vos coordonnées téléphonique :</h4>
+                <p><label for="phoneNumber">Numero De Telephone : </label><input type="text" name="phoneNumber" id="phoneNumber" value="" />
+                  <label for="mobilNumber">Numero De Mobil : </label><input type="text" name="mobilNumber" id="mobilNumber" value="" />
+                </p>
+                <p>Champs obligatoire *</p>
+              </form>
+              <div class="modal-footer">
+                <button type="button" name="compare" id="validCoordonnees">Valider vos coordonnées</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="assets/js/projet.js">
+      </script>
+    </body>
+    </html>
